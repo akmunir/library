@@ -4,15 +4,18 @@
 body{ /* Remove default margin for these guys */
     margin: 0;
     box-sizing: border-box;
+    background-color: #EF7B45;
   }
 .card-display {
     display: flex;
     height: 25vh;
     width: 25vh;
-    border: solid green;
+    
     flex-direction: column;
     border-radius: 30px;
-    box-shadow: 0px 0px 2px 2px rgb(197, 137, 137);
+    box-shadow: 0px 0px 2px 2px #CDEDF6;
+    background-color: #5EB1BF;
+    margin: 10px;
 }
 
 .card-container {
@@ -41,25 +44,35 @@ body{ /* Remove default margin for these guys */
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-color:#5EB1BF
 }
 
-.new-book {
+.remove {
+   margin-top: 10px;
+}
+
+.new-book, .header-text {
     color: black;
     background-color: #747C92;
     font-weight: bolder;
     border-radius:10px;
     margin-left: auto;
     width: 25%;
-    font-size: xx-large;
-    
-    
-    
+    font-size: xx-large; 
 }
-.main-content {
-    width:auto;
-    height: auto;
-    background-color:#A1E8AF;
+
+.header-text {
+    background-color: #042A2B;
+    margin-right:auto;
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+    color: #CDEDF6;
 }
+
 button:hover {
     background-color: rgb(168, 204, 236);
 }
@@ -69,7 +82,7 @@ button:hover {
     display: flex;
     flex-basis: auto;
     border: solid;
-    background-color: #747C92;
+    background-color: #042A2B;
 }
 
 
