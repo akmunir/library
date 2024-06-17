@@ -1,18 +1,23 @@
-
+* {
+    font-family: 'Open Sans';
+}
+body{ /* Remove default margin for these guys */
+    margin: 0;
+    box-sizing: border-box;
+  }
 .card-display {
     display: flex;
     height: 25vh;
     width: 25vh;
-    border: solid black;
+    border: solid green;
     flex-direction: column;
     border-radius: 30px;
+    box-shadow: 0px 0px 2px 2px rgb(197, 137, 137);
 }
 
 .card-container {
     display: flex;
     gap: 10px;
-    height: 100vh;
-    width: 100vh;
     flex-wrap: wrap;
 }
 
@@ -37,3 +42,34 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.new-book {
+    color: black;
+    background-color: #747C92;
+    font-weight: bolder;
+    border-radius:10px;
+    margin-left: auto;
+    width: 25%;
+    font-size: xx-large;
+    
+    
+    
+}
+.main-content {
+    width:auto;
+    height: auto;
+    background-color:#A1E8AF;
+}
+button:hover {
+    background-color: rgb(168, 204, 236);
+}
+
+.header {
+    height:5vh;
+    display: flex;
+    flex-basis: auto;
+    border: solid;
+    background-color: #747C92;
+}
+
+

@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <title>Library</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <button class="new-book">NEW BOOK</button>
-        <dialog class="form-dialog">
-        <div class="form-container">
-        </div>
-        <form method="post" class="form">
-            <div>
-            <label for="book_title">Book Title:</label>
-            <input type="text" id="book_title" name="bookTitle" required>
-        </div>
-        <br>
-        <div>
-            <label for="book_author">Author:</label>
-            <input type="text" id="book_author" name="bookAuthor" required>
-        </div>
-        <br>
-        <div>
-            <label for="book_pages">Pages:</label>
-            <input type="text" id="book_pages" name="bookPages" required>
-        </div>
-        <br>
-        <div>
-            <input type="submit">
-        </div>
-        </dialog>
-        </form>
-        <div class="card-container">
-            <div class="card-display">
-                <div class="title">Brave New World</div>
-                <div class="author"> Aldous Huxley</div>
-                <div class="pages">408 pages</div>
-                <button class="read">Read</button>
-                <button class="remove">Remove Book</button>
+   <head>
+      <title>Library</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <div class=header>
+         <div class="header-text">Library!</div>
+         <button class="new-book">Add Book </button>
+      </div>
+      <div class=main-content>
+         <dialog class="form-dialog">
+            <div class="form-container">
             </div>
-        </div>
-    </body>
+            <form method="post" class="form">
+               <div>
+                  <label for="book_title">Book Title:</label>
+                  <input type="text" id="book_title" name="bookTitle" required>
+               </div>
+               <br>
+               <div>
+                  <label for="book_author">Author:</label>
+                  <input type="text" id="book_author" name="bookAuthor" required>
+               </div>
+               <br>
+               <div>
+                  <label for="book_pages">Pages:</label>
+                  <input type="text" id="book_pages" name="bookPages" required>
+               </div>
+               <br>
+               <div>
+                  <input type="submit">
+               </div>
+         </dialog>
+         </form>
+      </div>
+      <div class="card-container">
+         <div class="card-display">
+            <div class="title">Brave New World</div>
+            <div class="author"> Aldous Huxley</div>
+            <div class="pages">408 pages</div>
+            <button class="read">Read</button>
+            <button class="remove">Remove Book</button>
+         </div>
+      </div>
+   </body>
 </html>
