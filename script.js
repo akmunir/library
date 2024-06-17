@@ -29,22 +29,27 @@ function displayBooks() {
     cardContainer.appendChild(card);
     card.classList.add("card-display");
     for (let i = 0; i < bookList.length; i++) {
+
         const title = document.createElement("div");
         title.classList.add("title");
         title.innerText = bookList[i].title;
         card.appendChild(title);
+
         const author = document.createElement("div");
         author.classList.add("author");
         author.innerText = bookList[i].author;
         card.appendChild(author);
+        
         const pages = document.createElement("div");
         pages.classList.add("pages");
         pages.innerText = bookList[i].pages + " pages";
         card.appendChild(pages);
+
         const read = document.createElement("button");
         read.classList.add("read");
         read.innerText = "Not Read";
         card.appendChild(read);
+
         const remove = document.createElement("button");
         remove.classList.add("remove");
         remove.id = i;
@@ -67,7 +72,6 @@ addEventListener("submit", function(event) {
     bookTitleInput.value = " ";
     bookAuthorInput.value = " ";
     bookPagesInput.value = " ";
-
 });
 
 addEventListener("click", function(event) {

@@ -13,6 +13,7 @@
     gap: 10px;
     height: 100vh;
     width: 100vh;
+    flex-wrap: wrap;
 }
 
 .title {
@@ -20,6 +21,7 @@
     text-align: center;
     font-size: x-large;
     font-weight: bolder;
+    flex-basis: auto;
 }
 .author {
     text-align: center;
@@ -27,4 +29,11 @@
 .pages {
     padding: 20px;
     text-align: center;
+}
+
+.read, .remove 
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
