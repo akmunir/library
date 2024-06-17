@@ -3,6 +3,7 @@ const bookAuthorInput = document.getElementById("book_author");
 const bookPagesInput = document.getElementById("book_pages");
 const form = document.querySelector("form");
 const dialog = document.querySelector(".form-dialog");
+const cardContainer = document.querySelector(".card-container");
 let bookList = [];
 
 function Book(title, author, pages, read) {
@@ -22,6 +23,23 @@ function addBookToLibrary(book) {
 }
 
 function displayBooks() {
+    const card = document.createElement("div");
+    cardContainer.appendChild(card);
+    card.classList.add("card-display");
+    for (let i = 0; i < bookList.length; i++) {
+        const title = document.createElement("div");
+        title.id = "#book_title";
+        title.innerText = bookList[i].title;
+        card.appendChild(title);
+        const author = document.createElement("div");
+        author.id = "#book_author";
+        author.innerText = bookList[i].author;
+        card.appendChild(author);
+        const pages = document.createElement("div");
+        pages.id = "#book_pages";
+        pages.innerText = bookList[i].pages;
+        card.appendChild(pages);
+    }
 }
 
 addEventListener("submit", function(event) {
@@ -34,6 +52,9 @@ addEventListener("submit", function(event) {
     console.log(book.info());
     addBookToLibrary(book);
     displayBooks();
+    bookTitleInput.value = " ";
+    bookAuthorInput.value = " ";
+    bookPagesInput.value = " ";
 
 });
 
