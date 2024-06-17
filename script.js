@@ -11,6 +11,7 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.location = 0;
     this.info = function() {
         let info =  title + " by " + author + " , " + pages + " pages,";
         info += read ? " read " : "not read yet";
@@ -20,6 +21,7 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(book) {
     bookList.push(book);
+    book.location = bookList.length - 1;
 }
 
 function displayBooks() {
@@ -28,17 +30,27 @@ function displayBooks() {
     card.classList.add("card-display");
     for (let i = 0; i < bookList.length; i++) {
         const title = document.createElement("div");
-        title.id = "#book_title";
+        title.classList.add("title");
         title.innerText = bookList[i].title;
         card.appendChild(title);
         const author = document.createElement("div");
-        author.id = "#book_author";
+        author.classList.add("author");
         author.innerText = bookList[i].author;
         card.appendChild(author);
         const pages = document.createElement("div");
-        pages.id = "#book_pages";
-        pages.innerText = bookList[i].pages;
+        pages.classList.add("pages");
+        pages.innerText = bookList[i].pages + " pages";
         card.appendChild(pages);
+        const read = document.createElement("button");
+        read.classList.add("read");
+        read.innerText = "Not Read";
+        card.appendChild(read);
+        const remove = document.createElement("button");
+        remove.classList.add("remove");
+        remove.id = i;
+        remove.innerText = "Remove Book";
+        card.appendChild(remove);
+
     }
 }
 
@@ -59,8 +71,22 @@ addEventListener("submit", function(event) {
 });
 
 addEventListener("click", function(event) {
-    if (event.target.classList.contains("new-book"))
+    let target = event.target;
+    if (target.classList.contains("new-book"))
         dialog.showModal();
+    if (target.classList.contains("read")) {
+        if (target.innerText === "Read") {
+            target.innerText = "Not Read";
+        } 
+        else 
+        target.innerText = "Read";
+    }
+    if (target.classList.contains("remove")) {
+        bookList.splice(target.id, 1);
+        const parent = target.parentElement;
+        parent.remove();
+    }
+
 });
 
 

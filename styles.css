@@ -1,12 +1,30 @@
+
 .card-display {
     display: flex;
     height: 25vh;
     width: 25vh;
     border: solid black;
     flex-direction: column;
+    border-radius: 30px;
 }
 
 .card-container {
     display: flex;
     gap: 10px;
+    height: 100vh;
+    width: 100vh;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.author {
+    text-align: center;
+}
+.pages {
+    padding: 20px;
+    text-align: center;
 }
